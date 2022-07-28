@@ -33,7 +33,8 @@ PLATFORM_SUFFIXES = {
     'Windows': 'win64',
     'Darwin': 'macos',
 }
-DEFAULT_HEADERS_DIR = '/private/home/tianjunz/pets_lamcts/mujoco200_{}/include'.format(
+#DEFAULT_HEADERS_DIR = '/private/home/tianjunz/pets_lamcts/mujoco200_{}/include'.format(
+DEFAULT_HEADERS_DIR = '~/.mujoco/mujoco210/include'.format(
     PLATFORM_SUFFIXES[platform.system()])
 
 # Relative paths to the binding generator script and the output directory.
@@ -182,7 +183,7 @@ setup(
     author='DeepMind',
     license='Apache License, Version 2.0',
     keywords='machine learning control physics MuJoCo AI',
-    python_requires='>=3.6, <3.10',
+    python_requires='>=3.6, <=3.10.4',
     install_requires=[
         'absl-py>=0.7.0',
         'dm-env',
